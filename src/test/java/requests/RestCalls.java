@@ -5,6 +5,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+
 public class RestCalls {
 
     public static Response getRequest(String uri) {
@@ -18,7 +19,6 @@ public class RestCalls {
         RequestSpecification requestSpecification = RestAssured.given().body(jsonPayload);
         requestSpecification.contentType(ContentType.JSON);
         Response response = requestSpecification.post(uri);
-
         return response;
     }
 
